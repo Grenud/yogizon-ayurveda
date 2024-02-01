@@ -16,6 +16,7 @@ function Router() {
 				<Route path="/" element={<Home />} />
 				<Route path="*" element={<Error404 />} />
 			</Routes>
+			<Footer />
 		</div>
 	)
 }

@@ -19,32 +19,46 @@ function Features() {
             buttonLink: "/products",
             buttonText: "Know More"
         },
+        {
+            title: "Our Pharmacies",
+            description: "Visit our pharmacies and get the best medicines.",
+            image: "https://images.unsplash.com/photo-1604145942179-63cd583fcf64?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHBoYXJtYWN5fGVufDB8fDB8fHww",
+            buttonLink: "/pharmacies",
+            buttonText: "Know More"
+        },
+        {
+            title: "Find a Clinic Near You",
+            description: "Find a clinic near you and get the best treatment.",
+            image:"https://images.unsplash.com/photo-1576602975754-efdf313b9342?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBoYXJtYWN5fGVufDB8fDB8fHww",
+            buttonLink: "/clinics",
+            buttonText: "Know More"
+        }
     ]
 
 
-  return (
-    <div className="h-screen flex flex-col items-center justify-center md:my-0 my-[16rem]">
-        <div className="flex flex-col items-center justify-center gap-4">
-            <h1 className="text-4xl font-semibold">Features</h1>
-            <p className="text-lg font-light">Some of the features we provide.</p>
-        </div>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 my-4">
-            {
-                cards.map((card, index) => (
-                    <Cards
-                        key={index}
-                        title={card.title}
-                        description={card.description}
-                        image={card.image}
-                        buttonLink={card.buttonLink}
-                        buttonText={card.buttonText}
-                    />
-                ))
-            }
-        </div>
+    return (
+        <div className="h-screen flex flex-col items-center justify-center md:my-0 my-[16rem]">
+            <div className="flex flex-col items-center justify-center gap-4">
+                <h1 className="text-4xl font-semibold">Features</h1>
+                <p className="text-lg font-light">Some of the features we provide.</p>
+            </div>
+            <div className="flex flex-col flex-wrap md:flex-row items-center justify-center gap-6 my-4">
+                {
+                    cards.map((card, index) => (
+                        <Cards
+                            key={index}
+                            title={card.title}
+                            description={card.description}
+                            image={card.image}
+                            buttonLink={card.buttonLink}
+                            buttonText={card.buttonText}
+                        />
+                    ))
+                }
+            </div>
 
-    </div>
-  );
+        </div>
+    );
 }
 
 export default Features;

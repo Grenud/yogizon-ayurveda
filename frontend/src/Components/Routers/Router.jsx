@@ -13,7 +13,6 @@ function Router() {
 				<Route path="*" element={<Error404 />} />
 			{/* <Dashboard /> */}
 			</Routes>
-			<Footer />
 		</div>
 	)
 }

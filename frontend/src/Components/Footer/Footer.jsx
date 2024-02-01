@@ -8,16 +8,16 @@ const SITEMAP = [
     },
     {
         title: "Help Center",
-        links: ["Discord", "Twitter", "GitHub", "Contact Us"],
-    },
-    {
-        title: "Resources",
-        links: ["Blog", "Newsletter", "Free Products", "Affiliate Program"],
+        links: ["Facebook", "Mail", "Contact Us", "Visit Us"],
     },
     {
         title: "Products",
-        links: ["Templates", "UI Kits", "Icons", "Mockups"],
+        links: ["Meditation Courses", "Ayurveda Equipment", "Training Modules"],
     },
+    {
+        title: "Our Other Programs",
+        links: ["Yogizon", "Ayurveda", "Naturopathy", "Gaoshala"],
+    }
 ];
 
 function Footer() {
@@ -53,7 +53,7 @@ function Footer() {
                     <Typography
                         variant="small"
                         className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0">
-                        <a href="https://material-tailwind.com/">Material Tailwind</a>. All
+                        <a href="https://yogizon.com/" target="blank">Yogizon</a>. All
                         Rights Reserved.
                     </Typography>
                     <div className="flex gap-4 text-blue-gray-900 sm:justify-center">

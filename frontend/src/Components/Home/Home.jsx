@@ -1,8 +1,9 @@
 import React from "react";
+import Features from "../Features/Features";
 
 function Home() {
 	return <div>
-		Home
+		<Features />
 	</div>
 }
 

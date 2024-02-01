@@ -55,12 +55,16 @@ function Sidebar() {
 					color="transparent"
 					shadow={false}
 					className="h-[calc(100vh-2rem)] w-full p-4">
-					<div className="mb-2 flex items-center gap-4 p-4">
-
+					<div className="flex items-center gap-4 p-2">
 						<img src = {leaf} alt="leaf" className="h-8 w-8" />
-
-						<Typography variant="h5" color="blue-gray">
-							Ayurveda
+						<Typography
+								variant="h5"
+								color="green"
+								textGradient
+								as="a"
+								href="/"
+								className="cursor-pointer font-bold">
+								Ayurveda
 						</Typography>
 					</div>
 					<List>

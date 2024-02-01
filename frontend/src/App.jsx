@@ -1,9 +1,9 @@
-import { Button } from "@material-tailwind/react";
+import Router from "./Components/Routers/Router";
 
 function App() {
   return (
     <>
-      <Button>Button</Button>
+      <Router />
     </>
   );
 }

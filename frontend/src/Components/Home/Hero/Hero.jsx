@@ -5,7 +5,7 @@ import { Typography, Button, IconButton } from "@material-tailwind/react";
 function Hero() {
     return (
         <div className="w-full">
-            <div className="relative overflow-hidden h-screen flex justify-center items-center">
+            <div className="relative overflow-hidden min-h-screen flex justify-center items-center">
                 <div className="flex absolute -top-96 start-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-green-300/50 to-green-100 blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem]"></div>
                     <div className="bg-gradient-to-tl from-green-50 via-green-100 to-green-50 blur-3xl w-[90rem] h-[50rem] rounded-fulls origin-top-left -rotate-12 -translate-x-[15rem]"></div>

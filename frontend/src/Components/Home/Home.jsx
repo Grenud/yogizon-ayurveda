@@ -10,10 +10,10 @@ function Home() {
       <div>
         <StickyNavbar />
       </div>
-      <div className="h-screen">
+      <div className="">
         <Hero />
       </div>
-      <div className="h-screen">
+      <div className="">
         <Features />
       </div>
 	  <div className="mt-[10rem]">

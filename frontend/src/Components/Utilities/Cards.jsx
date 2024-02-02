@@ -15,7 +15,7 @@ function Cards(props) {
 	const { title, description, image, buttonLink, buttonText } = props
 
 	return (
-		<div>
+		<div className='sm:m-0 m-4'>
 			<Card className="max-w-[24rem] overflow-hidden">
 				<CardHeader
 					floated={false}

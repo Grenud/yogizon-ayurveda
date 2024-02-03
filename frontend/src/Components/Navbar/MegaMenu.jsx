@@ -67,7 +67,6 @@ function NavListMenu() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 	const renderItems = navListMenuItems.map(
 		({ icon, title, description, link }, key) => (
-
 			<Link to={link} key={key}>
 				<MenuItem className="flex items-center gap-3 rounded-lg">
 					<div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
@@ -150,23 +149,29 @@ function NavList() {
 	return (
 		<List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
 			<NavListMenu />
-			<Button
-				variant="gradient"
-				size="sm"
-				color="green"
-				className="hidden lg:inline-block"
-			>
-				<span>Sign Up</span>
-			</Button>
+			<ListItem>
+				<Link to="/register">
+					<Button
+						variant="gradient"
+						size="sm"
+						color="green"
+						className="hidden lg:inline-block"
+					>
+						<span>Sign Up</span>
+					</Button>
+				</Link>
+			</ListItem>
 
-			<Button
-				variant="text"
-				size="sm"
-				color="green"
-				className="hidden lg:inline-block"
-			>
-				<span>Sign In</span>
-			</Button>
+			<ListItem>
+				<Button
+					variant="text"
+					size="sm"
+					color="green"
+					className="hidden lg:inline-block"
+				>
+					<span>Sign In</span>
+				</Button>
+			</ListItem>
 		</List>
 	);
 }

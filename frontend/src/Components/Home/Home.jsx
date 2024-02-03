@@ -2,7 +2,7 @@ import React from "react";
 import Features from "./Features/Features";
 
 import StickyNavbar from "../Navbar/Navbar";
-import MegaMenu from "../MegaMenu/MegaMenu";
+import MegaMenu from "../Navbar/MegaMenu";
 
 import Hero from "./Hero/Hero";
 import Footer from "../Footer/Footer";

@@ -32,26 +32,31 @@ const navListMenuItems = [
 		title: "Our Philosophy",
 		description: "Learn about our mission and values.",
 		icon: SquaresPlusIcon,
+        link: "/philosophy"
 	},
 	{
 		title: "Gallery",
 		description: "View our gallery of photos and videos.",
 		icon: UserGroupIcon,
+        link: "/gallery"
 	},
 	{
 		title: "Customer Feedback",
 		description: "Read what our customers are saying about us.",
 		icon: Bars4Icon,
+        link: "/feedback"
 	},
 	{
 		title: "Research",
 		description: "Explore our research and development initiatives.",
 		icon: SunIcon,
+        link: "/research"
 	},
 	{
 		title: "Contact Us",
 		description: "Find the perfect solution for your needs.",
 		icon: PhoneIcon,
+        link: "/contactus"
 	},
 ];
 
@@ -141,8 +146,6 @@ function NavListMenu() {
 function NavList() {
 	return (
 		<List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-            
-
 			<NavListMenu />
 			<Button
 				variant="gradient"
@@ -152,6 +155,7 @@ function NavList() {
 			>
 				<span>Sign Up</span>
 			</Button>
+            
 			<Button
 				variant="text"
 				size="sm"

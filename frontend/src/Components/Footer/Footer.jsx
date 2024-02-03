@@ -61,7 +61,7 @@ function Footer() {
 					>
 						<a href="https://yogizon.com/" target="blank" className="hover:underline text-white">
 							<Typography variant="small" color="white" className="font-[300]">
-								Yogizon
+								Yogizon©
 							</Typography>
 						</a>
 						<Typography
@@ -69,7 +69,7 @@ function Footer() {
 							color="white"
 							className="font-[300] mx-2"
 						>
-							. All Rights Reserved.
+							All Rights Reserved.
 						</Typography>
 					</Typography>
 					<div className="flex text-white-900 sm:justify-center">

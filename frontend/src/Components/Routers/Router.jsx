@@ -6,6 +6,8 @@ import Footer from '../Footer/Footer'
 import Error404 from '../Error/Error404'
 import Register from '../Register/Register'
 
+import Philosophy from '../AboutUs/Philosophy'
+
 function Router() {
 	return (
 		<div>
@@ -13,7 +15,9 @@ function Router() {
 				<Route path="/" element={<Home />} />
 				<Route path="*" element={<Error404 />} />
 				<Route path='/register' element={<Register />} />
-			{/* <Dashboard /> */}
+
+				{/* About Us */}
+				<Route path='/philosophy' element={<Philosophy />} />
 			</Routes>
 		</div>
 	)

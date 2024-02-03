@@ -160,14 +160,16 @@ function NavList() {
 				</Button>
 			</Link>
 
-			<Button
-				variant="text"
-				size="sm"
-				color="green"
-				className="hidden lg:inline-block"
-			>
-				<span>Sign In</span>
-			</Button>
+			<Link to="/login">
+				<Button
+					variant="text"
+					size="sm"
+					color="green"
+					className="hidden lg:inline-block"
+				>
+					<span>Sign In</span>
+				</Button>
+			</Link>
 		</List>
 	);
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import {
 	Navbar,
 	Collapse,
@@ -32,31 +34,31 @@ const navListMenuItems = [
 		title: "Our Philosophy",
 		description: "Learn about our mission and values.",
 		icon: SquaresPlusIcon,
-        link: "/philosophy"
+		link: "/philosophy",
 	},
 	{
 		title: "Gallery",
 		description: "View our gallery of photos and videos.",
 		icon: UserGroupIcon,
-        link: "/gallery"
+		link: "/gallery",
 	},
 	{
 		title: "Customer Feedback",
 		description: "Read what our customers are saying about us.",
 		icon: Bars4Icon,
-        link: "/feedback"
+		link: "/feedback",
 	},
 	{
 		title: "Research",
 		description: "Explore our research and development initiatives.",
 		icon: SunIcon,
-        link: "/research"
+		link: "/research",
 	},
 	{
 		title: "Contact Us",
 		description: "Find the perfect solution for your needs.",
 		icon: PhoneIcon,
-        link: "/contactus"
+		link: "/contactus",
 	},
 ];
 
@@ -64,8 +66,8 @@ function NavListMenu() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 	const renderItems = navListMenuItems.map(
-		({ icon, title, description }, key) => (
-			<a href="#" key={key}>
+		({ icon, title, description, link }, key) => (
+			<a href={link} key={key}>
 				<MenuItem className="flex items-center gap-3 rounded-lg">
 					<div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
 						{" "}
@@ -155,7 +157,7 @@ function NavList() {
 			>
 				<span>Sign Up</span>
 			</Button>
-            
+
 			<Button
 				variant="text"
 				size="sm"
@@ -181,19 +183,20 @@ export default function MegaMenuWithHover() {
 	return (
 		<Navbar className="mx-auto max-w-screen-xl px-4 py-2 fixed top-0 left-0 right-0 z-[100]">
 			<div className="flex items-center justify-between text-blue-gray-900">
-				<div className="flex items-center justify-center">
-					<img src={leaf} alt="leaf" className="h-6 w-6" />
-					<Typography
-						as="a"
-						href="#"
-						variant="h6"
-						color="green"
-						textGradient
-						className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-					>
-						ayurveda
-					</Typography>
-				</div>
+				<a href="/">
+					<div className="flex items-center justify-center">
+						<img src={leaf} alt="leaf" className="h-6 w-6" />
+						<Typography
+							as="a"
+							variant="h6"
+							color="green"
+							textGradient
+							className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+						>
+							ayurveda
+						</Typography>
+					</div>
+				</a>
 				<div className="hidden lg:block">
 					<NavList />
 				</div>

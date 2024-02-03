@@ -149,29 +149,25 @@ function NavList() {
 	return (
 		<List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
 			<NavListMenu />
-			<ListItem>
-				<Link to="/register">
-					<Button
-						variant="gradient"
-						size="sm"
-						color="green"
-						className="hidden lg:inline-block"
-					>
-						<span>Sign Up</span>
-					</Button>
-				</Link>
-			</ListItem>
-
-			<ListItem>
+			<Link to="/register">
 				<Button
-					variant="text"
+					variant="gradient"
 					size="sm"
 					color="green"
 					className="hidden lg:inline-block"
 				>
-					<span>Sign In</span>
+					<span>Sign Up</span>
 				</Button>
-			</ListItem>
+			</Link>
+
+			<Button
+				variant="text"
+				size="sm"
+				color="green"
+				className="hidden lg:inline-block"
+			>
+				<span>Sign In</span>
+			</Button>
 		</List>
 	);
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.svg";
+import textLogo from "../../assets/textLogo.svg";
 
 import {
 	Navbar,
@@ -112,11 +114,11 @@ function NavListMenu() {
 						className="font-medium"
 					>
 						<ListItem
-							className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+							className="flex justify-center items-center gap-2 py-2 pr-4 font-medium text-gray-900"
 							selected={isMenuOpen || isMobileMenuOpen}
 							onClick={() => setIsMobileMenuOpen((cur) => !cur)}
 						>
-							About Us
+							<Typography>About Us</Typography>
 							<ChevronDownIcon
 								strokeWidth={2.5}
 								className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -150,25 +152,18 @@ function NavList() {
 		<List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
 			<NavListMenu />
 			<Link to="/register">
-				<Button
-					variant="gradient"
-					size="sm"
-					color="green"
-					className="hidden lg:inline-block"
-				>
-					<span>Sign Up</span>
-				</Button>
+				<ListItem>
+					<Typography variant="h6" color="">
+						Sign Up
+					</Typography>
+				</ListItem>
 			</Link>
-
 			<Link to="/login">
-				<Button
-					variant="text"
-					size="sm"
-					color="green"
-					className="hidden lg:inline-block"
-				>
-					<span>Sign In</span>
-				</Button>
+				<ListItem className="bg-green-500 text-white hover:text-black">
+					<Typography variant="h6" color="white">
+						Login
+					</Typography>
+				</ListItem>
 			</Link>
 		</List>
 	);
@@ -188,17 +183,9 @@ export default function MegaMenuWithHover() {
 		<Navbar className="mx-auto max-w-screen-xl px-4 py-2 fixed top-0 left-0 right-0 z-[100]">
 			<div className="flex items-center justify-between text-blue-gray-900">
 				<a href="/">
-					<div className="flex items-center justify-center">
-						<img src={leaf} alt="leaf" className="h-6 w-6" />
-						<Typography
-							as="a"
-							variant="h6"
-							color="green"
-							textGradient
-							className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-						>
-							ayurveda
-						</Typography>
+					<div className="flex items-center justify-center gap-2">
+						<img src={logo} alt="logo" className="h-16 w-16" />
+						<img src={textLogo} alt="logo" className="h-22 w-20" />
 					</div>
 				</a>
 				<div className="hidden lg:block">

@@ -37,6 +37,7 @@ function Register() {
 					activeStep={activeStep}
 					isLastStep={(value) => setIsLastStep(value)}
 					isFirstStep={(value) => setIsFirstStep(value)}
+					className="md:hidden "
 				>
 					<Step
 						onClick={() => setActiveStep(0)}

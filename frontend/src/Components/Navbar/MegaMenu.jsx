@@ -27,6 +27,7 @@ import {
 	SquaresPlusIcon,
 	SunIcon,
 	UserGroupIcon,
+	PhotoIcon,
 } from "@heroicons/react/24/solid";
 
 const aboutUsMenuItems = [
@@ -39,13 +40,13 @@ const aboutUsMenuItems = [
 	{
 		title: "Gallery",
 		description: "View our gallery of photos and videos.",
-		icon: UserGroupIcon,
+		icon: PhotoIcon,
 		link: "/gallery",
 	},
 	{
 		title: "Customer Feedback",
 		description: "Read what our customers are saying about us.",
-		icon: Bars4Icon,
+		icon: UserGroupIcon,
 		link: "/feedback",
 	},
 	{

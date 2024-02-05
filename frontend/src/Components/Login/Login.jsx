@@ -5,7 +5,7 @@ import {
 	UserIcon,
 	BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
-import StickyNavbar from "../Navbar/Navbar";
+
 import Footer from "../Footer/Footer";
 import MegaMenuWithHover from "../Navbar/MegaMenu";
 

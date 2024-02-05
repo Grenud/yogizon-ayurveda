@@ -5,7 +5,7 @@ import {
 	UserIcon,
 	BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
-import StickyNavbar from "../Navbar/Navbar";
+
 import AccountInfo from "./AccountInfo";
 import ContactInfo from "./ContactInfo";
 import PersonalInfo from "./PersonalInfo";

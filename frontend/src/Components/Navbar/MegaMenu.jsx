@@ -27,9 +27,10 @@ import {
 	SquaresPlusIcon,
 	SunIcon,
 	UserGroupIcon,
+	PhotoIcon,
 } from "@heroicons/react/24/solid";
 
-const navListMenuItems = [
+const aboutUsMenuItems = [
 	{
 		title: "Our Philosophy",
 		description: "Learn about our mission and values.",
@@ -39,13 +40,13 @@ const navListMenuItems = [
 	{
 		title: "Gallery",
 		description: "View our gallery of photos and videos.",
-		icon: UserGroupIcon,
+		icon: PhotoIcon,
 		link: "/gallery",
 	},
 	{
 		title: "Customer Feedback",
 		description: "Read what our customers are saying about us.",
-		icon: Bars4Icon,
+		icon: UserGroupIcon,
 		link: "/feedback",
 	},
 	{
@@ -62,10 +63,28 @@ const navListMenuItems = [
 	},
 ];
 
-function NavListMenu() {
+const consultationMenuItems = [
+	{
+		title: "Choose Ved Ji",
+		description: "Find the perfect solution for your needs.",
+		icon: PhoneIcon,
+		link: "/consultation"
+	},
+];
+
+const shopMenuItems = [
+	{
+		title: "Body Care",
+		description: "Find the perfect solution for your needs.",
+		icon: PhoneIcon,
+		link: "/bodycare"
+	},
+];
+
+function AboutUs() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-	const renderItems = navListMenuItems.map(
+	const renderItems = aboutUsMenuItems.map(
 		({ icon, title, description, link }, key) => (
 			<Link to={link} key={key}>
 				<MenuItem className="flex items-center gap-3 rounded-lg">
@@ -148,7 +167,7 @@ function NavListMenu() {
 function NavList() {
 	return (
 		<List className="items-center mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-			<NavListMenu />
+			<AboutUs />
 			<Link to="/register">
 				<ListItem>
 					<Typography variant="h6" color="">

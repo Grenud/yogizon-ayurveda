@@ -7,7 +7,6 @@ import {
 	IconButton,
 	ButtonGroup,
 } from "@material-tailwind/react";
-import leaf from "../../assets/leaf.png";
 
 function StickyNavbar() {
 	const [openNav, setOpenNav] = React.useState(false);
@@ -70,7 +69,6 @@ function StickyNavbar() {
 					<div className="flex items-center justify-center">
 						<Button variant="text">
 							<div className="flex gap-2 justify-center items-center">
-								<img src={leaf} alt="leaf" className="h-6 w-6" />
 								<Typography
 									variant="h5"
 									color="green"

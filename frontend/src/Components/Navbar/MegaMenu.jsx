@@ -29,8 +29,6 @@ import {
 	UserGroupIcon,
 } from "@heroicons/react/24/solid";
 
-import leaf from "../../assets/leaf.png";
-
 const navListMenuItems = [
 	{
 		title: "Our Philosophy",
@@ -149,7 +147,7 @@ function NavListMenu() {
 
 function NavList() {
 	return (
-		<List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+		<List className="items-center mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
 			<NavListMenu />
 			<Link to="/register">
 				<ListItem>

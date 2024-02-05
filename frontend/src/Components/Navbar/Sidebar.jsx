@@ -28,8 +28,6 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-import leaf from "../../assets/leaf.png";
-
 function Sidebar() {
   const [open, setOpen] = React.useState(0);
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);

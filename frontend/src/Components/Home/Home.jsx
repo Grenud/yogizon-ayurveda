@@ -1,7 +1,6 @@
 import React from "react";
 import Features from "./Features/Features";
 
-import StickyNavbar from "../Navbar/Navbar";
 import MegaMenu from "../Navbar/MegaMenu";
 
 import Hero from "./Hero/Hero";
@@ -12,7 +11,6 @@ function Home() {
 	return (
 		<div>
 			<div>
-				{/* <StickyNavbar /> */}
 				<MegaMenu />
 			</div>
 			<div className="">

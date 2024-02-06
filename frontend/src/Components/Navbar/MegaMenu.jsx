@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../../assets/logo.svg";
 import textLogo from "../../assets/textLogo.svg";
+import Login from "../Login/Login";
 
 import AboutUsNav from "./AboutUsNav";
 
@@ -18,6 +19,12 @@ import {
 	MenuList,
 	MenuItem,
 	Button,
+	Dialog,
+	Card,
+	CardBody,
+	Input,
+	Checkbox,
+	CardFooter,
 } from "@material-tailwind/react";
 import {
 	ChevronDownIcon,
@@ -32,30 +39,45 @@ import {
 	UserGroupIcon,
 	PhotoIcon,
 } from "@heroicons/react/24/solid";
+
 import ConsultationNav from "./ConsultationNav";
 import ShopNav from "./ShopNav";
 
+
 function NavList() {
+
+	const [loginOpen, setLoginOpen] = React.useState(false)
+	const handleLoginOpen = () => setLoginOpen((cur) => !cur);
+
 	return (
+		<>
 		<List className="items-center mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
 			<AboutUsNav />
 			<ConsultationNav />
 			<ShopNav />
 			<Link to="/register">
 				<ListItem>
+				<Link to='/register'>
 					<Typography variant="h6" color="">
-						Sign Up
+						<Button>
+							Sign Up
+						</Button>
 					</Typography>
+					</Link>
 				</ListItem>
-			</Link>
-			<Link to="/login">
-				<ListItem className="bg-green-500 text-white hover:text-black">
+				
+				<ListItem>
 					<Typography variant="h6" color="white">
-						Login
+						<Button onClick={handleLoginOpen} className="bg-green-500 text-white hover:text-black">
+							Login
+						</Button>
 					</Typography>
 				</ListItem>
-			</Link>
 		</List>
+
+		<Login loginOpen={loginOpen} handleLoginOpen={handleLoginOpen} />		
+
+		</>
 	);
 }
 

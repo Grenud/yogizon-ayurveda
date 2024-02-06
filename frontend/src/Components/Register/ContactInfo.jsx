@@ -63,7 +63,7 @@ function ContactInfo() {
 							)}
 						</MenuList>
 					</Menu>
-					<div className="w-[50rem]">
+					<div className="w-[44rem]">
 						<Input
 							label="Mobile Number"
 							type="tel"
@@ -82,15 +82,15 @@ function ContactInfo() {
 						</Typography>
 					</div>
 					<div className="flex flex-col justify-center items-center gap-5">
-						<div className="flex gap-5">
-							<div className="flex flex-col gap-5 w-[30rem]">
+						<div className="flex flex-col gap-5">
+							<div className="flex flex-col gap-5 w-[50rem]">
 								<Input type="text" label="Street Name" />
 								<Input
 									type="text"
 									label="State/Province/Region"
 								/>
 							</div>
-							<div className="flex flex-col gap-5 w-[30rem]">
+							<div className="flex md:flex-row flex-col gap-5 w-[50rem]">
 								<Input type="text" label="Postal Code" />
 								<Input type="text" label="Country" />
 							</div>

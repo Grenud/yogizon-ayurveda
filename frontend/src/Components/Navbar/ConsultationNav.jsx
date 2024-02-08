@@ -17,6 +17,8 @@ import {
 	PhoneIcon,
 } from "@heroicons/react/24/solid";
 
+import Consultation from '../Consultation/Consultation'
+
 const consultationMenuItems = [
 	{
 		title: "Choose Ved Ji",
@@ -36,6 +38,7 @@ function ConsultationNav() {
 
 	const renderItems = consultationMenuItems.map(
 		({ icon, title, description, link }, key) => (
+			<>
 			<Link onClick={handleConsultOpen} key={key}>
 				<MenuItem className="flex items-center gap-3 rounded-lg">
 					<div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
@@ -62,6 +65,8 @@ function ConsultationNav() {
 					</div>
 				</MenuItem>
 			</Link>
+			<Consultation open={isConsultOpen} handler={handleConsultOpen} />
+			</>
 		)
 	);
 

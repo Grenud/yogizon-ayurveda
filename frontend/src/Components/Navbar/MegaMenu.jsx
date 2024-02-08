@@ -55,7 +55,6 @@ function NavList() {
 			<AboutUsNav />
 			<ConsultationNav />
 			<ShopNav />
-			<Link to="/register">
 				<ListItem>
 				<Link to='/register'>
 					<Typography variant="h6" color="">
@@ -63,7 +62,7 @@ function NavList() {
 							Sign Up
 						</Button>
 					</Typography>
-					</Link>
+				</Link>
 				</ListItem>
 				
 				<ListItem>
@@ -73,6 +72,7 @@ function NavList() {
 						</Button>
 					</Typography>
 				</ListItem>
+			
 		</List>
 
 		<Login loginOpen={loginOpen} handleLoginOpen={handleLoginOpen} />		
@@ -94,12 +94,12 @@ export default function MegaMenuWithHover() {
 	return (
 		<Navbar className="mx-auto max-w-screen-xl px-4 py-2 fixed top-0 left-0 right-0 z-[100]">
 			<div className="flex items-center justify-between text-blue-gray-900">
-				<a href="/">
+				<Link to="/">
 					<div className="flex items-center justify-center gap-2">
 						<img src={logo} alt="logo" className="h-16 w-16" />
 						<img src={textLogo} alt="logo" className="h-22 w-20" />
 					</div>
-				</a>
+				</Link>
 				<div className="hidden lg:block">
 					<NavList />
 				</div>

@@ -10,13 +10,13 @@ import {
 	CardFooter,
 } from "@material-tailwind/react";
 
-function Consultation({}) {
+function Consultation({open, handler}) {
   return (
     <>
 		<Dialog
-        size="xs"
-        open={loginOpen}
-        handler={handleLoginOpen}
+        size="sm"
+        open={open}
+        handler={handler}
         className="bg-transparent shadow-none"
       >
         <Card className="mx-auto w-full max-w-[24rem]">
@@ -44,7 +44,7 @@ function Consultation({}) {
             </div>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button variant="gradient" onClick={handleLoginOpen} fullWidth>
+            <Button variant="gradient" onClick={handler} fullWidth>
               Sign In
             </Button>
             <Typography variant="small" className="mt-4 flex justify-center">
@@ -55,7 +55,7 @@ function Consultation({}) {
                 variant="small"
                 color="blue-gray"
                 className="ml-1 font-bold"
-                onClick={handleLoginOpen}
+                onClick={handler}
               >
                 Sign up
               </Typography>

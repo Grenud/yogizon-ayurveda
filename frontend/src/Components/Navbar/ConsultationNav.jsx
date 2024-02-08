@@ -26,12 +26,17 @@ const consultationMenuItems = [
 	},
 ];
 
+
+
 function ConsultationNav() {
 	const [isConsultationMenuOpen, setisConsultationMenuOpen] = React.useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+	const [isConsultOpen, setIsConsultOpen] = React.useState(false);
+	const handleConsultOpen = () => setIsConsultOpen((cur) => !cur);
+
 	const renderItems = consultationMenuItems.map(
 		({ icon, title, description, link }, key) => (
-			<Link to={link} key={key}>
+			<Link onClick={handleConsultOpen} key={key}>
 				<MenuItem className="flex items-center gap-3 rounded-lg">
 					<div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
 						{" "}

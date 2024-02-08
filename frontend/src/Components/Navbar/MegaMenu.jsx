@@ -55,7 +55,6 @@ function NavList() {
 			<AboutUsNav />
 			<ConsultationNav />
 			<ShopNav />
-			<Link to="/register">
 				<ListItem>
 				<Link to='/register'>
 					<Typography variant="h6" color="">

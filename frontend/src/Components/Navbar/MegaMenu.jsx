@@ -23,6 +23,7 @@ import {
 
 import ConsultationNav from "./ConsultationNav";
 import ShopNav from "./ShopNav";
+import Dropdown from "../Dropdown/Dropdown";
 
 function NavList() {
 	
@@ -36,6 +37,7 @@ function NavList() {
 
 				<Link to="/seminar" className=" gap-2 py-2 px-2 font-light text-gray-900 hover:bg-[#f0f0f0] rounded-md ">Seminar</Link>
 				<Link to="/partnership" className=" gap-2 py-2 px-2 font-light text-gray-900 hover:bg-[#f0f0f0] rounded-md ">Partnership Programme</Link>
+
 				
 			</List>
 
@@ -70,7 +72,7 @@ export default function MegaMenuWithHover() {
 				<div className="hidden lg:block">
 					<NavList />
 				</div>
-				<div className="hidden gap-2 lg:flex">
+				<div className="hidden gap-2 lg:flex items-center ">
 					<Button onClick={handleLoginOpen} variant="text" size="sm" color="blue-gray">
 						Log In
 					</Button>
@@ -79,6 +81,7 @@ export default function MegaMenuWithHover() {
 						Sign In
 					</Button>
 					</Link>
+					<Dropdown />
 				</div>
 				<IconButton
 					variant="text"

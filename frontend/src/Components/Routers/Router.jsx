@@ -15,7 +15,7 @@ import Feedback from '../AboutUs/Feedback'
 import Research from '../AboutUs/Research'
 import ContactUs from '../AboutUs/ContactUs'
 
-import Consultation from '../Consultation/Consultation'
+// import Consultation from '../Consultation/Consultation'
 
 function Router() {
 	return (
@@ -34,7 +34,7 @@ function Router() {
 				<Route path='/contactus' element={<ContactUs />} />
 
 				{/* Consultation */}
-				<Route path='/consultation' element={<Consultation />} />
+				{/* <Route path='/consultation' element={<Consultation />} /> */}
 
 				{/* Shop */}
 

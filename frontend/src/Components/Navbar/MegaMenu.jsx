@@ -14,69 +14,46 @@ import {
 	IconButton,
 	List,
 	ListItem,
-	Menu,
-	MenuHandler,
-	MenuList,
-	MenuItem,
-	Button,
-	Dialog,
-	Card,
-	CardBody,
-	Input,
-	Checkbox,
-	CardFooter,
 } from "@material-tailwind/react";
 import {
-	ChevronDownIcon,
 	Bars3Icon,
 	XMarkIcon,
 } from "@heroicons/react/24/outline";
-import {
-	Bars4Icon,
-	PhoneIcon,
-	SquaresPlusIcon,
-	SunIcon,
-	UserGroupIcon,
-	PhotoIcon,
-} from "@heroicons/react/24/solid";
 
 import ConsultationNav from "./ConsultationNav";
 import ShopNav from "./ShopNav";
 
-
 function NavList() {
-
-	const [loginOpen, setLoginOpen] = React.useState(false)
+	const [loginOpen, setLoginOpen] = React.useState(false);
 	const handleLoginOpen = () => setLoginOpen((cur) => !cur);
 
 	return (
 		<>
-		<List className="items-center mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-			<AboutUsNav />
-			<ConsultationNav />
-			<ShopNav />
-				<ListItem>
-				<Link to='/register'>
+			<List className="items-center mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+				<AboutUsNav />
+				<ConsultationNav />
+				<ShopNav />
+				<ListItem
+					className="flex items-center justify-center bg-black hover:bg-white text-white hover:text-black"
+					onClick={handleLoginOpen}
+				>
 					<Typography variant="h6" color="">
-						<Button>
-							Sign Up
-						</Button>
-					</Typography>
-				</Link>
-				</ListItem>
-				
-				<ListItem>
-					<Typography variant="h6" color="white">
-						<Button onClick={handleLoginOpen} className="bg-green-500 text-white hover:text-black">
-							Login
-						</Button>
+						Login
 					</Typography>
 				</ListItem>
-			
-		</List>
 
-		<Login loginOpen={loginOpen} handleLoginOpen={handleLoginOpen} />		
+				<ListItem
+					className="bg-green-500 text-white hover:text-black"
+				>
+					<Link to="/register">
+						<Typography variant="h6" color="white">
+								Sign Up
+						</Typography>
+					</Link>
+				</ListItem>
+			</List>
 
+			<Login loginOpen={loginOpen} handleLoginOpen={handleLoginOpen} />
 		</>
 	);
 }

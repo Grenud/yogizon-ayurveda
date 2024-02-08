@@ -14,6 +14,7 @@ import {
 	IconButton,
 	List,
 	ListItem,
+	Button
 } from "@material-tailwind/react";
 import {
 	Bars3Icon,
@@ -24,8 +25,7 @@ import ConsultationNav from "./ConsultationNav";
 import ShopNav from "./ShopNav";
 
 function NavList() {
-	const [loginOpen, setLoginOpen] = React.useState(false);
-	const handleLoginOpen = () => setLoginOpen((cur) => !cur);
+	
 
 	return (
 		<>
@@ -33,27 +33,13 @@ function NavList() {
 				<AboutUsNav />
 				<ConsultationNav />
 				<ShopNav />
-				<ListItem
-					className="flex items-center justify-center bg-black hover:bg-white text-white hover:text-black"
-					onClick={handleLoginOpen}
-				>
-					<Typography variant="h6" color="">
-						Login
-					</Typography>
-				</ListItem>
 
-				<ListItem
-					className="bg-green-500 text-white hover:text-black"
-				>
-					<Link to="/register">
-						<Typography variant="h6" color="white">
-								Sign Up
-						</Typography>
-					</Link>
-				</ListItem>
+				<Link to="/seminar" className=" gap-2 py-2 px-2 font-light text-gray-900 hover:bg-[#f0f0f0] rounded-md ">Seminar</Link>
+				<Link to="/partnership" className=" gap-2 py-2 px-2 font-light text-gray-900 hover:bg-[#f0f0f0] rounded-md ">Partnership Programme</Link>
+				
 			</List>
 
-			<Login loginOpen={loginOpen} handleLoginOpen={handleLoginOpen} />
+			
 		</>
 	);
 }
@@ -68,8 +54,12 @@ export default function MegaMenuWithHover() {
 		);
 	}, []);
 
+	const [loginOpen, setLoginOpen] = React.useState(false);
+	const handleLoginOpen = () => setLoginOpen((cur) => !cur);
+
 	return (
-		<Navbar className="mx-auto max-w-screen-xl px-4 py-2 fixed top-0 left-0 right-0 z-[100]">
+		<>
+		<nav className="bg-[white] mx-auto w-screen px-4 py-2 fixed top-0 left-0 right-0 z-[100]">
 			<div className="flex items-center justify-between text-blue-gray-900">
 				<Link to="/">
 					<div className="flex items-center justify-center gap-2">
@@ -80,10 +70,20 @@ export default function MegaMenuWithHover() {
 				<div className="hidden lg:block">
 					<NavList />
 				</div>
+				<div className="hidden gap-2 lg:flex">
+					<Button onClick={handleLoginOpen} variant="text" size="sm" color="blue-gray">
+						Log In
+					</Button>
+					<Link to="/register">
+					<Button color="green"  variant="gradient" size="sm">
+						Sign In
+					</Button>
+					</Link>
+				</div>
 				<IconButton
 					variant="text"
 					color="blue-gray"
-					className="lg:hidden"
+					max-		className="lg:hidden"
 					onClick={() => setOpenNav(!openNav)}
 				>
 					{openNav ? (
@@ -92,10 +92,24 @@ export default function MegaMenuWithHover() {
 						<Bars3Icon className="h-6 w-6" strokeWidth={2} />
 					)}
 				</IconButton>
+				
 			</div>
 			<Collapse open={openNav}>
 				<NavList />
+				<div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+					<Button onClick={handleLoginOpen} variant="outlined" size="sm" color="blue-gray" fullWidth>
+						Log In
+					</Button>
+					<Link to="/register">
+						<Button color="green" variant="gradient" size="sm" fullWidth>
+							Sign In
+						</Button>
+					</Link>
+				</div>
 			</Collapse>
-		</Navbar>
+		</nav>
+
+		<Login loginOpen={loginOpen} handleLoginOpen={handleLoginOpen} />
+		</>
 	);
 }

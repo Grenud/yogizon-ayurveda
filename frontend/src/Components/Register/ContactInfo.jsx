@@ -63,7 +63,7 @@ function ContactInfo() {
 							)}
 						</MenuList>
 					</Menu>
-					<div className="w-[44rem]">
+					<div className="md:w-[44rem] flex items-center justify-center">
 						<Input
 							label="Mobile Number"
 							type="tel"
@@ -71,31 +71,32 @@ function ContactInfo() {
 						/>
 					</div>
 				</div>
-				<div className="w-[50rem]">
-					<div className="my-4">
+				<div className="md:w-[50rem] w-[20rem]">
+					<div className="my-4 md:text-left text-center">
 						<Typography
 							variant="h5"
 							color="gray"
-							className="text-left"
 						>
 							Address(Optional)
 						</Typography>
 					</div>
 					<div className="flex flex-col justify-center items-center gap-5">
 						<div className="flex flex-col gap-5">
-							<div className="flex flex-col gap-5 w-[50rem]">
+							<div className="flex flex-col gap-5 md:w-[50rem] w-[20rem]">
 								<Input type="text" label="Street Name" />
 								<Input
 									type="text"
 									label="State/Province/Region"
 								/>
 							</div>
-							<div className="flex md:flex-row flex-col gap-5 w-[50rem]">
+							<div className="flex md:flex-row flex-col gap-5 md:w-[50rem] w-[20rem]">
 								<Input type="text" label="Postal Code" />
 								<Input type="text" label="Country" />
 							</div>
 						</div>
-						<Input type="text" label="Additional Address Notes" />
+						<div className="md:w-[50rem] w-[20rem]">
+							<Input type="text" label="Additional Address Notes"/>
+						</div>
 					</div>
 				</div>
 			</div>

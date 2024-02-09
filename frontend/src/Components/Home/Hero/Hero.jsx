@@ -17,18 +17,14 @@ function Hero() {
                     <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
                         <div className="max-w-2xl text-center mx-auto">
                             <div className="mt-5 max-w-2xl">
-                                <h1 className="block font-semibold text-gray-800 text-4xl md:text-5xl lg:text-6xl">
-                                    <Typography variant="h1" color="black" className="font-poppins font-bold drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
+                                <h1 className="block text-white text-3xl md:text-4xl lg:text-5xl font-poppins font-bold drop-shadow-lg">
                                         Ayurveda: The Solution to Your Ailments
-                                    </Typography>
                                 </h1>
                             </div>
 
                             <div className="mt-5 max-w-3xl">
-                                <p className="">
-                                    <Typography variant="p" color="gray" className="font-normal">
+                                <p className="block text-black text-md font-poppins font-bold drop-shadow-lg">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi dolorem quibusdam, quas dolor ipsa beatae eligendi autem ea suscipit sed repellat voluptatum saepe ducimus fuga et recusandae culpa, odio labore!
-                                    </Typography>
                                 </p>
                             </div>
 

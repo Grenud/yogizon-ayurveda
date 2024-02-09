@@ -4,16 +4,16 @@ import React from "react";
 function AccountInfo() {
 	return (
 		<div className="flex flex-col justify-center items-center gap-7 w-full">
-			<div className="w-[50rem]">
+			<div className="md:w-[50rem] w-[20rem]">
 				<Input type="text" label="Full Name" />
 			</div>
-			<div className="w-[50rem]">
+			<div className="md:w-[50rem] w-[20rem]">
 				<Input type="email" label="Email" />
 			</div>
-			<div className="w-[50rem]">
+			<div className="md:w-[50rem] w-[20rem]">
 				<Input type="password" label="Password" />
 			</div>
-			<div className="w-[50rem]">
+			<div className="md:w-[50rem] w-[20rem]">
 				<Input type="password" label="Confirm Password" />
 				<Typography
 					variant="small"

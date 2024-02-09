@@ -23,8 +23,8 @@ function Register() {
 	return (
 		<div>
 			<MegaMenuWithHover />
-			<div className="min-h-screen w-full px-[17rem] py-4 flex flex-col justify-center items-center gap-7">
-				<div className="flex flex-col items-center justify-center gap-5">
+			<div className="min-h-screen sm:px-[17rem] px-0 w-full my-[5rem] py-4 flex flex-col justify-center items-center gap-7">
+				<div className="flex flex-col items-center justify-center gap-5 text-center ">
 					<Typography variant="h3" color="green">
 						Register
 					</Typography>
@@ -37,7 +37,7 @@ function Register() {
 					activeStep={activeStep}
 					isLastStep={(value) => setIsLastStep(value)}
 					isFirstStep={(value) => setIsFirstStep(value)}
-					className="md:hidden "
+					className="hidden md:flex"
 				>
 					<Step
 						onClick={() => setActiveStep(0)}
@@ -117,7 +117,7 @@ function Register() {
 						</div>
 					)}
 
-					<div className="mt-5 flex justify-between w-full">
+					<div className="mt-5 flex justify-between md:w-full">
 						<Button onClick={handlePrev} disabled={isFirstStep}>
 							Prev
 						</Button>
